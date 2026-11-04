@@ -35,10 +35,14 @@ A baseline nonlinear MPC was designed assuming full state feedback with no noise
 The EKF and MPC were integrated to handle measurement noise and a static load torque mismatch ($\tau_l^{plant} = 1.47$ Nm, $\tau_l^{model} = 2.0$ Nm).
 *   **Result:** The standard EKF effectively filtered noise, but model-plant mismatch degraded tracking. Augmenting the EKF to estimate the constant load torque online successfully eliminated the steady-state tracking error.
 
-### 4. Additional Task: Time-Varying Load Torque Estimation
+### 4. Advanced Implementation: Time-Varying Load Torque Estimation
+
 As an advanced extension, the augmented EKF framework was evaluated against a dynamically varying sinusoidal load torque:
 
-$$ \tau_l(k) = \tau_{\text{offset}} + A \sin(fk) $$
+$$
+\tau_l(k) = \tau_{\text{offset}} + A \sin(fk)
+$$
+
 *(where $\tau_{\text{offset}} = 1.47$ Nm, $A = 0.5$ Nm, $f = 0.05$ rad/sample).*
 
 *   **Methodology:** The state vector was augmented to $x = [i_a, \omega, \tau_l]^T$. The process noise covariance matrix $Q_{EKF}$ was tuned (setting $Q_{33} = 0.01$) to act as a forgetting factor, allowing the EKF to track dynamic changes.
