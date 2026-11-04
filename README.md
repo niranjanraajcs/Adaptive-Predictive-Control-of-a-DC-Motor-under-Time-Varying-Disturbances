@@ -37,6 +37,7 @@ The EKF and MPC were integrated to handle measurement noise and a static load to
 
 ### 4. Additional Task: Time-Varying Load Torque Estimation
 As an advanced extension, the augmented EKF framework was evaluated against a dynamically varying sinusoidal load torque:
+
 $$ \tau_l(k) = \tau_{\text{offset}} + A \sin(fk) $$
 *(where $\tau_{\text{offset}} = 1.47$ Nm, $A = 0.5$ Nm, $f = 0.05$ rad/sample).*
 
