@@ -1,4 +1,4 @@
-# EKF-Enhanced Model Predictive Control for a DC Motor
+# Adaptive Predictive Control of a DC Motor under Time-Varying Disturbances
 
 This repository contains the implementation and reports for a course project on advanced state estimation and control of a nonlinear DC motor. The project explores the integration of an Extended Kalman Filter (EKF) with a nonlinear Model Predictive Controller (MPC) to achieve robust tracking performance under measurement noise, physical constraints, and model-plant mismatch.
 
