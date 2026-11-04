@@ -43,7 +43,7 @@ $$
 \tau_l(k) = \tau_{\text{offset}} + A \sin(fk)
 $$
 
-*(where $\tau_{\text{offset}} = 1.47$ Nm, $A = 0.5$ Nm, $f = 0.05$ rad/sample).*
+*(where* $\tau_{\text{offset}} = 1.47$ *Nm,* $A = 0.5$ *Nm,* $f = 0.05$ *rad/sample).*
 
 *   **Methodology:** The state vector was augmented to $x = [i_a, \omega, \tau_l]^T$. The process noise covariance matrix $Q_{EKF}$ was tuned (setting $Q_{33} = 0.01$) to act as a forgetting factor, allowing the EKF to track dynamic changes.
 *   **Result:** The EKF successfully converged to the true time-varying torque within 2-3 seconds. Despite a small, inherent phase lag, the online parameter estimation allowed the MPC to maintain highly robust speed tracking (RMSE = 3.12 rad/s) under dynamic disturbances.
